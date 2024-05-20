@@ -6,6 +6,5 @@ The UGIAD dataset provides open access to 3425 UGI endoscopic images from Macao 
 The dataset can also be downloaded using the following links:
 
 Google Drive: https://drive.google.com/file/d/1ZTC7dyO84uOFG0qsiJrp-BSatsQ2KEo7/view?usp=drive_link
-
 Baidu Cloud: https://pan.baidu.com/s/18qJIDrRZy9Yx_nYKuZ8b8w (key: tcfg)
 
