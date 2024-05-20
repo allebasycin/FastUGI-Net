@@ -15,4 +15,5 @@ You can download the pretrained weights of the median model of each model size o
 | B0+XXS  | https://drive.google.com/file/d/1XNWLUYP271csG0Jh4xtU-A9zpWWBAOCw/view?usp=drive_link |
 | B3+XXS  | https://drive.google.com/file/d/1CsB7vsVg640pjXZ95Pl1MATa9Ktzu2Ah/view?usp=drive_link   |
 | B5+XXS  | https://drive.google.com/file/d/1e1fDCTi5CqHWgOOTEJdVqnWZ-Wr4AfSz/view?usp=drive_link   |
-| B7+XXS  | https://drive.google.com/file/d/19B2TpIttZ08_bQXm4mtxuW7qA0OYGT3T/view?usp=drive_link)  |
+| B7+XXS  | https://drive.google.com/file/d/19B2TpIttZ08_bQXm4mtxuW7qA0OYGT3T/view?usp=drive_link)
+|
