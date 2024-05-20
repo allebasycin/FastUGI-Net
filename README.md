@@ -9,10 +9,10 @@ Baidu Cloud: https://pan.baidu.com/s/18qJIDrRZy9Yx_nYKuZ8b8w (key: tcfg)
 
 ## Get Started
 ### Pretrained weights
-You can download the pretrained weights of the best model of each model size of FastUGI-Net via the below links.
+You can download the pretrained weights of the median model of each model size of FastUGI-Net via the below links.
 | Model size  | Link |
 | ------------- | ------------- |
-| B0+XXS  | Content Cell  |
-| B3+XXS  | Content Cell  |
-| B5+XXS  | Content Cell  |
-| B7+XXS  | Content Cell  |
+| B0+XXS  | [Link] (https://drive.google.com/file/d/1XNWLUYP271csG0Jh4xtU-A9zpWWBAOCw/view?usp=drive_link) |
+| B3+XXS  | [Link] (https://drive.google.com/file/d/1CsB7vsVg640pjXZ95Pl1MATa9Ktzu2Ah/view?usp=drive_link)   |
+| B5+XXS  | [Link] (https://drive.google.com/file/d/1e1fDCTi5CqHWgOOTEJdVqnWZ-Wr4AfSz/view?usp=drive_link)   |
+| B7+XXS  | [Link] (https://drive.google.com/file/d/19B2TpIttZ08_bQXm4mtxuW7qA0OYGT3T/view?usp=drive_link)   |
