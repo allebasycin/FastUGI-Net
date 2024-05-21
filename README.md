@@ -12,7 +12,7 @@ Baidu Cloud: https://pan.baidu.com/s/18qJIDrRZy9Yx_nYKuZ8b8w (key: tcfg)
 You can download the pretrained weights of the median model of each model size of FastUGI-Net via the below links.
 | Model size  | Anatomical landmark accuracy | Disease accuracy | Consistency accuracy |Link |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| B0+XXS  | 91.70% | 91.42% | 98.57% | https://drive.google.com/file/d/1XNWLUYP271csG0Jh4xtU-A9zpWWBAOCw/view?usp=drive_link |
+| B0+XXS  | 91.70% | 91.42% | 98.57% | [Link](https://drive.google.com/file/d/1XNWLUYP271csG0Jh4xtU-A9zpWWBAOCw/view?usp=drive_link) |
 | B3+XXS  | 92.27% | 92.99% | 98.57% | [Link](https://pages.github.com/)  |
 | B5+XXS  | 92.27% | 93.71% | 98.36% | https://drive.google.com/file/d/1e1fDCTi5CqHWgOOTEJdVqnWZ-Wr4AfSz/view?usp=drive_link   |
 | B7+XXS  | 92.70% | 94.13% | 98.16% | https://drive.google.com/file/d/19B2TpIttZ08_bQXm4mtxuW7qA0OYGT3T/view?usp=drive_link)
