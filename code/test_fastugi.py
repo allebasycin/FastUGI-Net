@@ -57,12 +57,15 @@ def test_loop_fn_multlabel(test_loader, model, device):
                                                [0, 0, 0, 0, 0, 0, 0, 1, 0],
                                                [0, 0, 0, 0, 0, 0, 0, 0, 1]]).to(device)
 
-            try:
-                # Remove images that are predicted as normal images from the disease prediction and anatomical
-                # landmark prediction in each batch
-                disease_pred_tensor = torch.tensor(disease_output)
-                anatomical_pred_tensor = torch.tensor(anatomical_output)
-                disease_nonzero_indexes = torch.where(pred_d != 0)
+            # Remove images that are predicted as normal images from the disease prediction and anatomical
+            # landmark prediction in each batch
+            disease_pred_tensor = torch.tensor(disease_output)
+            anatomical_pred_tensor = torch.tensor(anatomical_output)
+            disease_nonzero_indexes = torch.where(pred_d != 0)
+            if len(disease_nonzero_indexes[0]) == 0:
+                consistent_count_pred += 0
+                non_zero_count_pred += 0
+            else:
                 anatomical_pred_label_non_zero = anatomical_pred_tensor[disease_nonzero_indexes[0]]
                 disease_pred_label_nonzero = disease_pred_tensor[disease_nonzero_indexes[0]]
 
@@ -75,10 +78,6 @@ def test_loop_fn_multlabel(test_loader, model, device):
                     consistent_value = consistency_matrix[disease_value][anatomical_value]
                     if consistent_value == 1:
                         consistent_count_pred += 1
-
-            except:
-                consistent_count_pred += 0
-                non_zero_count_pred += 0
 
     accuracy_a = 100.0 * correct_a / total_samples
     accuracy_d = 100.0 * correct_d / total_samples
