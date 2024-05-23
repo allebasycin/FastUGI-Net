@@ -5,7 +5,6 @@ import csv
 from torch.utils.data import Dataset, DataLoader
 import torchvision.transforms as transforms
 from PIL import Image
-from tqdm import tqdm
 import torchvision.transforms.functional as f
 
 interp = transforms.InterpolationMode.BICUBIC
@@ -25,35 +24,11 @@ to_Tensor = transforms.Compose([
     transforms.ConvertImageDtype(torch.float32),
 ])
 
-anatomical_classes = {
-    'esophagus': {'label': 0},
-    'squamocolumnar_junction': {'label': 1},
-    'fundus': {'label': 2},
-    'body_antegrade': {'label': 3},
-    'body_retroflex': {'label': 4},
-    'angulus': {'label': 5},
-    'antrum': {'label': 6},
-    'duodenal_bulb': {'label': 7},
-    'descending_part_of_duodenum': {'label': 8}
-}
-
-disease_classes = {
-    'normal': {'label': 0},
-    'esophageal_neoplasm': {'label': 1},
-    'esophageal_varices': {'label': 2},
-    'gatroesophageal_reflux_disease': {'label': 3},
-    'gastric_neoplasm': {'label': 4},
-    'gastric_polyp': {'label': 5},
-    'gastric_ulcer': {'label': 6},
-    'gastric_varices': {'label': 7},
-    'duodenal_diseases(bulb)': {'label': 8},
-    'duodenal_diseases(descending)': {'label': 9}
-}
-disease_class_num = len(disease_classes)
-anatomical_class_num = len(anatomical_classes)
 
 class EndoDataset(Dataset):
     def __init__(self,
+                 anatomical_classes_dict,
+                 disease_classes_dict,
                  raw_path,
                  split_path,
                  task,
@@ -73,8 +48,8 @@ class EndoDataset(Dataset):
         self.std = std
         self.h_size = h_size
         self.w_size = w_size
-        for d_cl in disease_classes.keys():
-            for a_cl in anatomical_classes.keys():
+        for d_cl in disease_classes_dict.keys():
+            for a_cl in anatomical_classes_dict.keys():
                 split_file = split_path + d_cl+ '/' + str(a_cl) + '/' + task + '.csv'
                 split_file_trueorfalse = os.path.isfile(split_file)
                 if split_file_trueorfalse == False:
@@ -89,8 +64,8 @@ class EndoDataset(Dataset):
                             img = resize(to_Tensor(img), h_size=self.h_size, w_size=self.w_size)
                             img = normalize(img, self.mean, self.std)
                             self.data.append(img)
-                            self.anatomical_label.append(anatomical_classes[a_cl]['label'])
-                            a = disease_classes[d_cl]['label']
+                            self.anatomical_label.append(anatomical_classes_dict[a_cl]['label'])
+                            a = disease_classes_dict[d_cl]['label']
                             self.disease_label.append(a)
 
 

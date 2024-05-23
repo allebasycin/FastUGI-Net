@@ -1,7 +1,7 @@
 import torch
 from sklearn.metrics import classification_report, confusion_matrix
-from .dataset_fastugi import EndoDataset, image_batch_wrapper
-from .fastugi_net import FastUGINet
+from dataset_fastugi import EndoDataset, image_batch_wrapper
+from fastugi_net import FastUGINet
 from torch.utils.data import DataLoader
 
 def test_loop_fn_multlabel(test_loader, model, device):
@@ -100,29 +100,30 @@ def test_loop_fn_multlabel(test_loader, model, device):
 
 
 anatomical_classes = {
-    'Esophagus': {'label': 0},
-    'Squamocolumnar junction': {'label': 1},
-    'Fundus': {'label': 2},
-    'Gastric body (antegrade)': {'label': 3},
-    'Gastric body (retroflex)': {'label': 4},
-    'Angulus': {'label': 5},
-    'Antrum': {'label': 6},
-    'Duodenal bulb': {'label': 7},
-    'Descending part of duodenum': {'label': 8}
+    'esophagus': {'label': 0},
+    'squamocolumnar_junction': {'label': 1},
+    'fundus': {'label': 2},
+    'body_antegrade': {'label': 3},
+    'body_retroflex': {'label': 4},
+    'angulus': {'label': 5},
+    'antrum': {'label': 6},
+    'duodenal_bulb': {'label': 7},
+    'descending_part_of_duodenum': {'label': 8}
 }
 
 disease_classes = {
-    'Normal': {'label': 0},
-    'Esophageal_neoplasm': {'label': 1},
-    'Esophageal varices': {'label': 2},
-    'Gatroesophageal reflux disease': {'label': 3},
-    'Gastric neoplasm': {'label': 4},
-    'Gastric polyp': {'label': 5},
-    'Gastric ulcer': {'label': 6},
-    'Gastric varices': {'label': 7},
-    'Duodenal diseases(bulb)': {'label': 8},
-    'Duodenal diseases(descending)': {'label': 9}
+    'normal': {'label': 0},
+    'esophageal_neoplasm': {'label': 1},
+    'esophageal_varices': {'label': 2},
+    'gatroesophageal_reflux_disease': {'label': 3},
+    'gastric_neoplasm': {'label': 4},
+    'gastric_polyp': {'label': 5},
+    'gastric_ulcer': {'label': 6},
+    'gastric_varices': {'label': 7},
+    'duodenal_diseases(bulb)': {'label': 8},
+    'duodenal_diseases(descending)': {'label': 9}
 }
+
 
 anatomical_classname = []
 for item in anatomical_classes.keys():
@@ -135,6 +136,7 @@ for item in disease_classes.keys():
 anatomical_class_num = len(anatomical_classes)
 disease_class_num = len(disease_classes)
 
+
 h_size = 224
 w_size = 224
 
@@ -146,7 +148,12 @@ pretrained_weight_path = ""
 cnn_size = 'b0' #size of EfficientNet
 cnn_size = 'xxs' #size of MobileViT
 
-test_dataset = EndoDataset(image_dir, split_dir, 'test', transform=None, mean=[0.5187, 0.2813, 0.2154], std=[0.2786, 0.1975, 0.1759], h_size=h_size, w_size=w_size)
+#The mean and std below is the calculated values of our training set
+mean = [0.5187, 0.2813, 0.2154]
+std = [0.2786, 0.1975, 0.1759]
+
+test_dataset = EndoDataset(anatomical_classes_dict=anatomical_classes, disease_classes_dict=disease_classes, raw_path=image_dir, split_path=split_dir, task='test', transform=None, mean=mean, std=std, h_size=h_size, w_size=w_size)
+b = len(test_dataset)
 test_loader = DataLoader(test_dataset, batch_size=1, shuffle=True, collate_fn=image_batch_wrapper, pin_memory=True)
 device_test = torch.device("cpu")
 
