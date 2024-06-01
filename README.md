@@ -16,6 +16,12 @@ Our anatomical annotation approach is guided by previous photodocumentation guid
     <img src="/assets/anatomical_annotation.png" alt="Anatomical landmark annotation of the UGIAD Dataset" width="350">
 </p>
 
+### Disease annotation
+For disease annotation, the images in the dataset are classified into normal findings or 9 diseases including esophageal neoplasm, esophageal varices, GERD, gastric neoplasm, gastric polyp, gastric ulcer, gastric varices, duodenal bulb diseases and diseases of the descending part of the duodenum.
+<p align="center">
+    <img src="/assets/disease_example.png" alt="Representative images of UGIAD Dataset" width="1000">
+</p>
+
 The following table displays the data distribution of the UGIAD dataset.
 | Anatomical landmark / Disease    | Normal | Esophageal neoplasm | Esophageal varices | GERD | Gastric neoplasm | Gastric polyp | Gastric ulcer | Gastric varices | Diseases of duodenal bulb | Diseases of descending part of duodenum | Total |
 |----------------------------------|--------|---------------------|--------------------|------|------------------|---------------|---------------|-----------------|---------------------------|-----------------------------------------|-------|
