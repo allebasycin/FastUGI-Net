@@ -36,8 +36,7 @@ The following table displays the data distribution of the UGIAD dataset.
 | Descending part of duodenum      | 154    | 0                   | 0                  | 0    | 0                | 0             | 0             | 0               | 0                         | 115                                     | 269   |
 | Total                            | 1014   | 257                 | 228                | 143  | 486              | 530           | 366           | 84              | 202                       | 115                                     | 3425  |
 
-## Get Started
-### Pretrained weights
+## Pretrained weights
 You can download the pretrained weights of the median model of each model size of FastUGI-Net via the below links.
 | Model size  | Anatomical landmark accuracy | Disease accuracy | Consistency accuracy |Link |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
