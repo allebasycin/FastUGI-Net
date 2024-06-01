@@ -11,7 +11,8 @@ The dataset is divided into 9 anatomical landmark classes and 10 disease classes
 
 ###Anatomical landmark annotation
 Our anatomical annotation approach is guided by previous photodocumentation guidelines such as the British and Japanese guidelines. The images are categorised into 9 landmarks. Anatomical landmarks identified in the antegrade view within the UGIAD dataset encompass the esophagus (E), squamocolumnar junction (SJ), gastric body in antegrade view (Ba), antrum (Ant), duodenal bulb (DB) and descending part of the duodenum (DD). Conversely, the retroflex view encompasses landmarks such as the fundus (F), gastric body in retroflex view (Br) and angulus (Ang).
-![Anatomical landmark annotation of the UGIAD Dataset](/assets/anatomical_annotation.png)
+
+<img src="/assets/anatomical_annotation.png" alt="Anatomical landmark annotation of the UGIAD Dataset" width="200">
 
 The following table displays the data distribution of the UGIAD dataset.
 | Anatomical landmark / Disease    | Normal | Esophageal neoplasm | Esophageal varices | GERD | Gastric neoplasm | Gastric polyp | Gastric ulcer | Gastric varices | Diseases of duodenal bulb | Diseases of descending part of duodenum | Total |
