@@ -46,7 +46,7 @@ You can download the pretrained weights of the median model of each model size o
 | B7+XXS  | 92.70% | 94.13% | 98.16% | [Link](https://drive.google.com/file/d/19B2TpIttZ08_bQXm4mtxuW7qA0OYGT3T/view?usp=sharing) |
 
 ## Citation
-If you use FastUGI-Net and the UGIAD dataset in your research, please cite our paper:
+If you use FastUGI-Net or the UGIAD dataset in your research, please cite our paper:
 ```
 @article{FastUGI-Net,
     title={FastUGI-Net: Enhanced Real-Time Endoscopic Diagnosis with Efficient Multi-Task Learning},
