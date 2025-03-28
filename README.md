@@ -44,3 +44,11 @@ You can download the pretrained weights of the median model of each model size o
 | B3+XXS  | 92.27% | 92.99% | 98.57% | [Link](https://drive.google.com/file/d/1CsB7vsVg640pjXZ95Pl1MATa9Ktzu2Ah/view?usp=sharing)  |
 | B5+XXS  | 92.27% | 93.71% | 98.36% | [Link](https://drive.google.com/file/d/1e1fDCTi5CqHWgOOTEJdVqnWZ-Wr4AfSz/view?usp=sharing)   |
 | B7+XXS  | 92.70% | 94.13% | 98.16% | [Link](https://drive.google.com/file/d/19B2TpIttZ08_bQXm4mtxuW7qA0OYGT3T/view?usp=sharing) |
+
+## Citation
+@article{FastUGI-Net,
+    title={FastUGI-Net: Enhanced Real-Time Endoscopic Diagnosis with Efficient Multi-Task Learning},
+    author={In Neng Chan and Pak Kin Wong and Tao Yan and Yanyan Hu and Chon In Chan and Peixuan Ge and Zheng Li and Ying Hu and Shan Gao and Hon Ho Yu},
+    journal={Expert Systems with Applications (In press)},
+    year={2025}
+}
