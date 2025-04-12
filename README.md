@@ -1,5 +1,5 @@
 # FastUGI-Net and UGIAD Dataset
-This repository provides the codes of FastUGI-Net and the UGIAD dataset.
+This repository provides the official codes of FastUGI-Net and the UGIAD dataset.
 
 ## Dataset Details
 The UGIAD dataset provides open access to 3425 UGI endoscopic images from Macao Kiang Wu Hospital and Xiangyang Centre Hospital, mainly captured using WLE and partly by NBI. These images encompass three key areas: esophagus, stomach, and duodenum, each annotated with specific anatomical landmarks and disease types, and these annotations are both applied and subsequently verified by medical specialists from the two contributing hospitals. The dataset is developed ensuring patient anonymity and privacy, with all materials fully anonymized by excluding patient information from the images and renaming the files according to their anatomical landmark and disease labels, and thereby exempting it from patient consent requirements. The images consist of different resolutions that range between 268x217 and 1545x1156 with most of the black borders removed. 
@@ -51,7 +51,9 @@ If you use FastUGI-Net or the UGIAD dataset in your research, please cite our pa
 @article{FastUGI-Net,
     title={FastUGI-Net: Enhanced Real-Time Endoscopic Diagnosis with Efficient Multi-Task Learning},
     author={In Neng Chan and Pak Kin Wong and Tao Yan and Yanyan Hu and Chon In Chan and Peixuan Ge and Zheng Li and Ying Hu and Shan Gao and Hon Ho Yu},
-    journal={Expert Systems with Applications (In press)},
+    journal={Expert Systems with Applications},
+    DOI = {10.1016/j.eswa.2025.127444},
+    note = {(Published online)}
     year={2025}
 }
 ```
