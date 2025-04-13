@@ -4,11 +4,11 @@ This repository provides the official codes of FastUGI-Net and the UGIAD dataset
 ## Overview of FastUGI-Net
 FastUGI-Net is a lightweight multi-mask model that is designed to perform simultaneous classification of anatomical landmarks and diseases of the upper endoscopy. It employs a novel encoder, namely EffiViTNet, for feature extraction, and is trained using orthogonal task gradient.
 <p align="center">
-    <img src="/assets/model_structure.png" alt="Model structure of FastUGI-Net" width="350">
+    <img src="/assets/model_structure.png" alt="Model structure of FastUGI-Net" width="700">
 </p>
 
 <p align="center">
-    <img src="/assets/schematic_diagram.png" alt="Schematic diagram of the multi-task learning approach of FastUGI-Net," width="350">
+    <img src="/assets/schematic_diagram.png" alt="Schematic diagram of the multi-task learning approach of FastUGI-Net," width="700">
 </p>
 
 ## Dataset Details
