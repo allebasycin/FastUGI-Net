@@ -1,6 +1,15 @@
 # FastUGI-Net and UGIAD Dataset
 This repository provides the official codes of FastUGI-Net and the UGIAD dataset.
 
+## Overview of FastUGI-Net
+FastUGI-Net is a lightweight multi-mask model that is designed to perform simultaneous classification of anatomical landmarks and diseases of the upper endoscopy. It employs a novel encoder, namely EffiViTNet, for feature extraction, and is trained using orthogonal task gradient.
+<p align="center">
+    <img src="/assets/model_structure.png" alt="Model structure of FastUGI-Net" width="350">
+</p>
+
+<p align="center">
+    <img src="/assets/schematic_diagram.png" alt="Schematic diagram of the multi-task learning approach of FastUGI-Net," width="350">
+</p>
 
 ## Dataset Details
 The UGIAD dataset provides open access to 3425 UGI endoscopic images from Macao Kiang Wu Hospital and Xiangyang Centre Hospital, mainly captured using WLE and partly by NBI. These images encompass three key areas: esophagus, stomach, and duodenum, each annotated with specific anatomical landmarks and disease types, and these annotations are both applied and subsequently verified by medical specialists from the two contributing hospitals. The dataset is developed ensuring patient anonymity and privacy, with all materials fully anonymized by excluding patient information from the images and renaming the files according to their anatomical landmark and disease labels, and thereby exempting it from patient consent requirements. The images consist of different resolutions that range between 268x217 and 1545x1156 with most of the black borders removed. 
